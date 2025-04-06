@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* สีพื้นหลังแบบ Gradient */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งแสง */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* เงาแบบละเอียด */
+  width: 80%;
+  max-width: 800px;
+}
+
+img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* ทำให้รูปโปรไฟล์เป็นวงกลม */
+  margin-bottom: 20px;
+  border: 4px solid #fff; /* ขอบสีขาว */
+}
+
+h1 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #f0a500; /* สีทอง */
+  margin-top: 20px;
+  font-size: 24px;
+  text-transform: uppercase; /* เปลี่ยนเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  color: #f0a500; /* สีทอง */
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 18px;
+  color: #ccc; /* สีอ่อน */
+  margin: 10px 0;
+}
+
+a {
+  color: #f0a500; /* สีทอง */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease; /* เอฟเฟกต์เมื่อ hover */
+}
+
+a:hover {
+  color: #ff6f00; /* เมื่อ hover จะเปลี่ยนเป็นสีส้ม */
+}
+
+.clock-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งแสง */
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#clock {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f0a500; /* สีทอง */
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite ease-in-out; /* เอฟเฟกต์การขยายตัว */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color: #ff6f00; }
+  100% { transform: scale(1); }
+}

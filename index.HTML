@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>slumboy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #3f5892, #182848);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 800px;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #f0a500;
+      margin-top: 20px;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h3 {
+      color: #f0a500;
+      font-size: 25px;
+      margin-top: 25px;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      font-size: 18px;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    a {
+      color: #f0a500;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #f0a500;
+    }
+
+    /* เพิ่มเวลาแบบสวยงาม */
+    .clock-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(8, 8, 8, 0.7);
+      padding: 0px 0px;
+      border-radius: 30px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    #clock {
+      font-size: 25px;
+      font-weight: 600;
+      color: c;
+      letter-spacing: 2px;
+      animation: pulse 2.5 infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); color: #797979; }
+      100% { transform: scale(1); }
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/480677026_1284804899301389_7415172247506025867_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IUHeRqC0UDsQ7kNvwFrzJ3j&_nc_oc=Adl9SVtt9r1DJ7_os1YOiKv7iihM5GzlZNl7zWzyDYXP6T6JncOVUf1r_gLcqXEXQGI&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&_nc_gid=e71Mi9GhER6kOdtS8tfNrg&oh=00_AfGPZ0RUulAtu3vnLGCiHTwzrDYzfYIf21AYAFdN5aZGAw&oe=67F8901C" alt="รูปโปรไฟล์">
+    <h1>Hello! I'm [Slumboy_y]</h1>
+    <p>Welcome to my personal website. I'm passionate about technology, coding, and creativity. I'm currently learning how to build websites and improve my programming skills.</p>
+    
+    <h2>Personal slogan</h2>
+    <ul>
+      <li>ไม่หล่อ แต่เมียมึงรู้จัก</li>
+    </ul>
+
+    <h2>About Me</h2>
+    <ul>
+      <li>✅ วัยรุ่นทรงเชง ขอเล็งหัวใจเธอ </li>
+      <li>✅ ไม่ขอแรงกว่าใคร แต่ขอใจเธอก็พอ</li>
+      <li>✅ ถึงพี่ดูภูธร แต่รับรองพาน้องปลอดภัย</li>
+    </ul>
+  
+    <h3>Contact Me</h3>
+    <p>You can reach me at: <a href="mailto:Kerzonga69@gmail.com">Kerzonga69@gmail.com</a></p>
+  </div>
+
+  <!-- แสดงเวลาในมุมขวาบน -->
+  <div class="clock-container">
+    <h3></h3>
+    <p id="clock">--:--:--</p>
+  </div>
+
+  <script>
+    // ฟังก์ชันอัปเดตเวลา
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("clock").innerText = now.toLocaleTimeString();
+    }
+
+    setInterval(updateTime, 1000); // อัปเดตทุก 1 วิ
+    updateTime(); // เรียกครั้งแรก
+
+  </script>
+
+  <script src="script.js"></script>
+
+  <title>ปุ่มอีโมจิและข้อความ</title>
+  <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden; /* ป้องกันปุ่มลอยออกนอกหน้าจอ */
+    }
+
+    button {
+    font-size: 38px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 60%;
+    color: white;
+    position: absolute;
+    transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+    background-color: #ffe6001e;
+    }
+
+    #message {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    transform: translateX(-50%) scale(0); /* เริ่มต้นด้วยขนาด 0 */
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    opacity: 0; /* ซ่อนข้อความ */
+    transition: transform 0.5s ease, opacity 0.3s ease; /* เพิ่ม animation */
+    }
+
+    #message.show {
+    transform: translateX(-50%) scale(1); /* ขยายขนาด */
+    opacity: 1; /* แสดงข้อความ */
+    }
+  </style>
+  <body>
+
+  <!-- ปุ่มอีโมจิเดียว -->
+  <button id="floatingButton" onclick="showMessage('💬 ทำไว้ดักควาย5555555')"> 💬 </button>
+
+  <!-- แสดงข้อความ -->
+  <div id="message"></div>
+
+  <script>
+    function showMessage(message) {
+    const messageElement = document.getElementById("message");
+    messageElement.innerText = message;
+    messageElement.classList.add("show"); // เพิ่มคลาสเพื่อแสดงข้อความ
+
+    // ลบคลาสหลังจาก 3 วินาที
+    setTimeout(() => {
+      messageElement.classList.remove("show");
+    }, 3000);
+    }
+
+    // ฟังก์ชันสำหรับทำให้ปุ่มลอยและเด้งกลับเมื่อชนขอบ
+    function animateButton() {
+    const button = document.getElementById("floatingButton");
+    let x = Math.random() * (window.innerWidth - button.offsetWidth);
+    let y = Math.random() * (window.innerHeight - button.offsetHeight);
+    let dx = 2; // ความเร็วในแนวนอน
+    let dy = 2; // ความเร็วในแนวตั้ง
+
+    function move() {
+      x += dx;
+      y += dy;
+
+      // ตรวจสอบการชนขอบ
+      if (x <= 0 || x + button.offsetWidth >= window.innerWidth) {
+      dx = -dx; // เปลี่ยนทิศทาง
+      }
+      if (y <= 0 || y + button.offsetHeight >= window.innerHeight) {
+      dy = -dy; // เปลี่ยนทิศทาง
+      }
+
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+
+      requestAnimationFrame(move); // เรียกฟังก์ชันซ้ำ
+    }
+
+    move();
+    }
+
+    // เรียกใช้ฟังก์ชัน animateButton เมื่อโหลดหน้า
+    animateButton();
+  </script>
